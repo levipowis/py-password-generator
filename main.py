@@ -37,8 +37,9 @@ random_letters = get_random_letters(nr_letters)
 random_symbols = get_random_symbols(nr_symbols)
 random_numbers = get_random_numbers(nr_numbers)
 
-random_characters = "".join(random_letters) + "".join(random_symbols) + "".join(random_numbers)
+combined_characters = random_letters + random_symbols + random_numbers
+random.shuffle(combined_characters)
 
-generated_password = ""
+generated_password = "".join(combined_characters)
 
-print(random_characters)
+print(f"Here is your password: {generated_password}")
