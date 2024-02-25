@@ -6,9 +6,9 @@ symbols = ['!', '#', '$', '%', '&', '(', ')', '*', '+']
 print("Welcome to the PyPassword Generator!")
 nr_letters= int(input("How many letters would you like in your password?\n")) 
 nr_symbols = int(input(f"How many symbols would you like?\n"))
-# nr_numbers = int(input(f"How many numbers would you like?\n"))
+nr_numbers = int(input(f"How many numbers would you like?\n"))
 
-def random_letter_picker(nr_letters):
+def get_random_letters(nr_letters):
     list_length = nr_letters
     random_letters = []
     for i in range(0, list_length):
@@ -16,4 +16,22 @@ def random_letter_picker(nr_letters):
         random_letters.append(letters[random_index])
     return random_letters
 
-print(random_letter_picker(nr_letters))
+def get_random_symbols(nr_symbols):
+    list_length = nr_symbols
+    random_symbols = []
+    for i in range(0, list_length):
+        random_index = random.randint(0, len(symbols) - 1)
+        random_symbols.append(symbols[random_index])
+    return random_symbols
+
+def get_random_numbers(nr_numbers):
+    list_length = nr_numbers
+    random_numbers = []
+    for i in range(0, list_length):
+        random_index = random.randint(0, len(numbers) - 1)
+        random_numbers.append(numbers[random_index])
+    return random_numbers
+
+print(get_random_letters(nr_letters))
+print(get_random_symbols(nr_symbols))
+print(get_random_numbers(nr_numbers))
