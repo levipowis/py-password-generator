@@ -15,6 +15,6 @@ The script does the following:
 
 ## Lessons Learned
 
-The script was pretty straightforward for me to build. The only issue I ran into was learning how random.shuffle() works. I was tryint to store it to a variable but that was not working.
+The script was pretty straightforward for me to build. The only issue I ran into was learning how random.shuffle() works. I was trying to store it to a variable but that was not working. Figured out it just needs to be ran on it's own and it shuffles the current list and does not create a new one.
 
 The main lesson learned from this was just breaking it down into separate pieces to solve and then bringing them all back together in the end.
